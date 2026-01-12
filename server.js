@@ -13,7 +13,9 @@ app.use(
     origin: [
       'https://evoclabs.com',
       'https://www.evoclabs.com',
-      'http://localhost:3000'
+      'http://localhost:3000',
+      'http://localhost:5173',
+      'http://localhost:3001'
     ],
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
@@ -22,7 +24,7 @@ app.use(
 );
 
 // Routes
-app.use('/api', bookDemoRoutes);
+app.use('/api/book-demo', bookDemoRoutes);
 
 // Health check (VERY IMPORTANT FOR RENDER)
 app.get('/', (req, res) => {
