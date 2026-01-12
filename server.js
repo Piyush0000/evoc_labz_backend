@@ -24,7 +24,7 @@ app.use(
 );
 
 // Routes
-app.use('/api/book-demo', bookDemoRoutes);
+app.use('/api', bookDemoRoutes);
 
 // Health check (VERY IMPORTANT FOR RENDER)
 app.get('/', (req, res) => {
